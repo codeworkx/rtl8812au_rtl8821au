@@ -22,6 +22,10 @@ EXTRA_CFLAGS += -I$(src)/include
 
 EXTRA_LDFLAGS += --strip-debug
 
+# Hack for dkms on arch linux
+export CONFIG_RTL8812A = m
+export CONFIG_RTL8821A = m
+
 CONFIG_AUTOCFG_CP = n
 
 ########################## WIFI IC ############################
